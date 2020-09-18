@@ -1,0 +1,1733 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass revtex4-1
+\begin_preamble
+% Added by lyx2lyx
+\renewcommand{\textendash}{--}
+\renewcommand{\textemdash}{---}
+\end_preamble
+\options notitlepage,reprint
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Multimode Renormalized Effective Theory for Cavity Rydberg Polaritons
+\end_layout
+
+\begin_layout Author
+Logan W.
+ Clark
+\end_layout
+
+\begin_layout Section
+Setup
+\end_layout
+
+\begin_layout Subsection
+Hamiltonian, Definitions
+\end_layout
+
+\begin_layout Standard
+The free Hamiltonian for our multimode cavity containing a gas of three-level
+ atoms can be written:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{multline*}
+H_{0}=\sum_{n}^{N_{cav}}\delta_{c}^{n}a_{n}^{\dagger}a_{n}+\sum_{n}^{N_{cav}}\sum_{m}^{N_{at}}(g_{mn}\sigma_{m}^{eg}a_{n}+g_{mn}^{*}\sigma_{m}^{ge}a_{n}^{\dagger})\\
++\delta_{e}\sum_{m}^{N_{at}}\sigma_{m}^{ee}+\delta_{2}\sum_{m}^{N_{at}}\sigma_{m}^{rr}+\sum_{m}^{N_{at}}\left(\Omega\sigma_{m}^{re}+\Omega^{*}\sigma_{m}^{er}\right)\\
++\frac{1}{2}\sum_{p\neq q}\sigma_{q}^{rr}\sigma_{p}^{rr}U(|x_{m}-x_{n}|)
+\end{multline*}
+
+\end_inset
+
+where the detunings are 
+\begin_inset Formula 
+\[
+\delta_{c}^{n}\equiv\epsilon_{n}-\omega_{p}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\delta_{e}=\epsilon_{p}-\omega_{p}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\delta_{2}=\epsilon_{r}-\omega_{b}-\omega_{p}
+\]
+
+\end_inset
+
+including a unique detuning 
+\begin_inset Formula $\delta_{c}^{n}$
+\end_inset
+
+ for each possible cavity mode 
+\begin_inset Formula $a_{n}$
+\end_inset
+
+; note that each detuning includes an imaginary component encoding the decay
+ rate of the state.
+ Here, there are 
+\begin_inset Formula $N_{cav}$
+\end_inset
+
+ total cavity modes and 
+\begin_inset Formula $N_{at}$
+\end_inset
+
+ total atoms.
+ The operators 
+\begin_inset Formula 
+\[
+\sigma_{m}^{AB}\equiv\left|A\right\rangle _{m}\left\langle B\right|_{m}
+\]
+
+\end_inset
+
+take the 
+\begin_inset Formula $m$
+\end_inset
+
+'th atom from state 
+\begin_inset Formula $\left|B\right\rangle $
+\end_inset
+
+ to 
+\begin_inset Formula $\left|A\right\rangle $
+\end_inset
+
+.
+ The interaction strength between cavity mode 
+\begin_inset Formula $n$
+\end_inset
+
+ and atom 
+\begin_inset Formula $m$
+\end_inset
+
+ is denoted 
+\begin_inset Formula $g_{mn}$
+\end_inset
+
+.
+ The blue Rabi frequency 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ is assumed to be homogeneous, which is necessary for solving the (simplest)
+ renormalized effective theory.
+ The Rydberg-Rydberg interactions are encoded in the potential 
+\begin_inset Formula $U(|x_{m}-x_{n}|)$
+\end_inset
+
+.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+In general, it is assumed that the atom number in each mode is sufficiently
+ large that we can neglect subradiant emission of a collective mode into
+ the ``wrong'' cavity mode, and that we can ignore the fact that it is not
+ possible to excite the same atom twice.
+ ???
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The Hamiltonian is perturbed by the cavity probe 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+V=\Omega_{p}(c^{\dagger}+c)
+\]
+
+\end_inset
+
+for which we assume that the input mode is a single, arbitrary superposition
+ 
+\begin_inset Formula $c$
+\end_inset
+
+ of the cavity modes,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+c=\sum_{k}C_{k}a_{k}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\sum_{k}|C_{k}|^{2}=1.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Results from Non-Hermitian Perturbation Theory
+\end_layout
+
+\begin_layout Standard
+The second order equations of motion based on the Non-Hermitian Perturbation
+ Theory are:
+\series bold
+ 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Doubly occupied cavity modes: 
+\begin_inset Formula $\frac{(a_{k}^{\dagger})^{2}}{\sqrt{2}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\begin_inset Formula 
+\[
+2\delta_{c}^{k}B_{cc}^{kk}+\sqrt{2}\sum_{m}^{N_{at}}g_{mk}^{*}B_{ce}^{km}=\sqrt{2}C_{k}^{*}A_{c}^{k}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Two photons in different modes: 
+\begin_inset Formula $a_{k}^{\dagger}a_{n}^{\dagger}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+(\delta_{c}^{n}+\delta_{c}^{k})B_{cc}^{nk}+\sum_{m}^{N_{at}}g_{mn}^{*}B_{ce}^{km}+\sum_{m}^{N_{at}}g_{mk}^{*}B_{ce}^{nm}=C_{k}^{*}A_{c}^{n}+C_{n}^{*}A_{c}^{k}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+One photon one p-state: 
+\begin_inset Formula $a_{k}^{\dagger}\sigma_{m}^{eg}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{multline*}
+\delta_{c}^{k}B_{ce}^{km}+\sqrt{2}g_{mk}B_{cc}^{kk}+\sum_{p\neq k}^{N_{cav}}g_{mp}B_{cc}^{kp}+\sum_{n\neq m}^{N_{at}}g_{nk}^{*}B_{ee}^{nm}\\
++\delta_{e}B_{ce}^{km}+\left(\Omega_{m}^{b}\right)^{*}B_{cr}^{km}=C_{k}^{*}A_{e}^{m}
+\end{multline*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+One photon one rydberg: 
+\begin_inset Formula $a_{k}^{\dagger}\sigma_{m}^{rg}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\begin_inset Formula 
+\[
+\left(\delta_{c}^{k}+\delta_{2}\right)B_{cr}^{km}+\sum_{n\neq m}^{N_{at}}g_{kn}^{*}B_{er}^{nm}+\Omega_{m}^{b}B_{ce}^{km}=C_{k}^{*}A_{r}^{m}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Two p-states: 
+\begin_inset Formula $\sigma_{j}^{eg}\sigma_{k}^{eg}$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\sum_{n}^{N_{cav}}(g_{jn}B_{ce}^{nk}+g_{kn}B_{ce}^{nj})+2\delta_{e}B_{ee}^{jk}+\left(\Omega_{k}^{b}\right)^{*}B_{er}^{jk}+\left(\Omega_{j}^{b}\right)^{*}B_{er}^{kj}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+One p, one r: 
+\begin_inset Formula $\sigma_{j}^{eg}\sigma_{k}^{rg}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\begin_inset Formula 
+\[
+(\delta_{e}+\delta_{2})B_{er}^{jk}+\sum_{n}^{N_{cav}}g_{jn}B_{cr}^{nk}+\Omega_{k}^{b}B_{ee}^{jk}+\left(\Omega_{j}^{b}\right)^{*}B_{rr}^{jk}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Two rydbergs: 
+\begin_inset Formula $\sigma_{j}^{rg}\sigma_{k}^{rg}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\begin_inset Formula 
+\[
+(2\delta_{2}+U(|x_{j}-x_{k}|))B_{rr}^{jk}+\Omega_{j}^{b}B_{er}^{jk}+\Omega_{k}^{b}B_{er}^{kj}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For the simplest version of the renormalized effective theory (the only
+ version that exists so far), we will only require the last equation.
+\end_layout
+
+\begin_layout Section
+Multimode Renormalized Effective Theory
+\end_layout
+
+\begin_layout Subsection
+Non-interacting collective modes
+\end_layout
+
+\begin_layout Standard
+Until one considers the two-Rydberg manifold, the system is linear and collectiv
+e modes can be calculated exactly.
+ Here, the Hamiltonian separates exactly into Hamiltonians for each cavity
+ mode along with its collective P-state excitation and collective Rydberg
+ state excitation.
+ For the 
+\begin_inset Formula $k$
+\end_inset
+
+'th cavity mode, the collective p-state is created by the operator,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+p_{k}^{\dagger}\equiv\frac{1}{G_{k}}\sum_{m}^{N_{at}}g_{mk}\sigma_{m}^{eg},
+\]
+
+\end_inset
+
+and similarly the non-renormalized collective Rydberg-state is created by
+ the operator,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+r_{k}^{\dagger}\equiv\frac{1}{G_{k}}\sum_{m}^{N_{at}}g_{mk}\sigma_{m}^{rg},
+\]
+
+\end_inset
+
+where the total squared atom-photon interaction in each mode is given by,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+G_{k}^{2}\equiv\sum_{m}^{N_{at}}\left|g_{mk}\right|^{2}.
+\]
+
+\end_inset
+
+ We 
+\series bold
+will not use this Rydberg operator,
+\series default
+ but rather a generalized one 
+\begin_inset Formula $\tilde{r}_{k}$
+\end_inset
+
+, since the actual form of the collective Rydberg states will vary strongly
+ with number due to the renormalization.
+\end_layout
+
+\begin_layout Subsection
+Effective Hamiltonian
+\end_layout
+
+\begin_layout Standard
+We wish to dramatically reduce the size of the Hilbert space by rewriting
+ the Hamiltonian in terms of collective modes.
+ In particular, we wish to write the Hamiltonian in the form,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{multline*}
+H_{eff}=\sum_{n}^{N_{cav}}\delta_{c}^{n}a_{n}^{\dagger}a_{n}+G_{n}\sum_{n}^{N_{cav}}\left(p_{n}^{\dagger}a_{n}+p_{n}a_{n}^{\dagger}\right)+\delta_{e}\sum_{n}^{N_{cav}}p_{n}^{\dagger}p_{n}\\
++\sum_{n}^{N_{cav}}\delta_{2}r_{n}^{\dagger}r_{n}+\sum_{nq}^{N_{cav}}\left(\tilde{r}_{n}^{\dagger}\left(\Omega\delta_{nq}+\sum_{m\geq n,p}^{N_{cav}}\delta\tilde{\Omega}_{nmpq}\tilde{r}_{m}^{\dagger}\tilde{r}_{p}\right)p_{q}+\mathrm{H.c.}\right)\\
++\sum_{n\geq m,p\geq q}^{N_{cav}}\tilde{r}_{n}^{\dagger}\tilde{r}_{m}^{\dagger}\tilde{U}_{nmpq}\tilde{r}_{p}\tilde{r}_{q}
+\end{multline*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+If we want, we could bake the extra normalization factors into the definitions
+ for the effective parameters, which would certainly clean this up.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Comment
+status collapsed
+
+\begin_layout Plain Layout
+need to make sure numerical coefficients are done correctly...
+ (the equality in the top line SHOULD be satisfied; that is how the 
+\begin_inset Formula $\tilde{U}$
+\end_inset
+
+ were calculated!)
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\left\langle R_{w}R_{x}\right|\frac{1}{2}\sum_{nmpq}^{N_{cav}}\tilde{r}_{n}^{\dagger}\tilde{r}_{m}^{\dagger}\tilde{U}_{nmpq}\tilde{r}_{p}\tilde{r}_{q}\left|R_{y}R_{z}\right\rangle ?=\tilde{U}_{nmpq}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\left|R_{y}R_{z}\right\rangle =\frac{1}{\sqrt{1+\delta_{yz}}}r_{y}^{\dagger}r_{z}^{\dagger}\left|0\right\rangle 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\left\langle 0\right|\frac{1}{\sqrt{1+\delta_{wx}}}r_{w}r_{x}\frac{1}{2}\sum_{nmpq}^{N_{cav}}\tilde{r}_{n}^{\dagger}\tilde{r}_{m}^{\dagger}\tilde{U}_{nmpq}\tilde{r}_{p}\tilde{r}_{q}\frac{1}{\sqrt{1+\delta_{yz}}}r_{y}^{\dagger}r_{z}^{\dagger}\left|0\right\rangle 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\left\langle 0\right|\frac{1}{\sqrt{1+\delta_{wx}}}r_{w}r_{x}\frac{1}{2}\sum_{nmpq}^{N_{cav}}\tilde{r}_{n}^{\dagger}\tilde{r}_{m}^{\dagger}\tilde{U}_{nmpq}\left(\tilde{r}_{p}\delta_{qy}+\tilde{r}_{p}\tilde{r}_{y}^{\dagger}\tilde{r}_{q}\right)r_{z}^{\dagger}\frac{1}{\sqrt{1+\delta_{yz}}}\left|0\right\rangle 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\left\langle 0\right|\frac{1}{\sqrt{1+\delta_{wx}}}r_{w}r_{x}\frac{1}{2}\sum_{nmpq}^{N_{cav}}\tilde{r}_{n}^{\dagger}\tilde{r}_{m}^{\dagger}\tilde{U}_{nmpq}\left(\delta_{pz}\delta_{qy}+\delta_{py}\delta_{qz}\right)\frac{1}{\sqrt{1+\delta_{yz}}}\left|0\right\rangle 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\frac{2}{\sqrt{1+\delta_{wx}}}\frac{1}{2}\tilde{U}_{wxzy}\frac{2}{\sqrt{1+\delta_{yz}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+ONLY work sfor 
+\begin_inset Formula $w=x$
+\end_inset
+
+ and 
+\begin_inset Formula $y=z$
+\end_inset
+
+; what about: (
+\begin_inset Formula $y$
+\end_inset
+
+ and 
+\begin_inset Formula $z$
+\end_inset
+
+ interchangeable, so let's assume 
+\begin_inset Formula $y\geq z$
+\end_inset
+
+ for convenience)
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\left\langle R_{w}R_{x}\right|\sum_{n\geq m,p\geq q}^{N_{cav}}\tilde{r}_{n}^{\dagger}\tilde{r}_{m}^{\dagger}\frac{\tilde{U}_{nmpq}}{\sqrt{1+\delta_{nm}}\sqrt{1+\delta_{pq}}}\tilde{r}_{p}\tilde{r}_{q}\left|R_{y}R_{z}\right\rangle ?=\tilde{U}_{nmpq}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\left|R_{y}R_{z}\right\rangle =\frac{1}{\sqrt{1+\delta_{yz}}}r_{y}^{\dagger}r_{z}^{\dagger}\left|0\right\rangle 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\left\langle 0\right|\frac{1}{\sqrt{1+\delta_{wx}}}r_{w}r_{x}\sum_{n\geq m,p\geq q}^{N_{cav}}\tilde{r}_{n}^{\dagger}\tilde{r}_{m}^{\dagger}\frac{\tilde{U}_{nmpq}}{\sqrt{1+\delta_{nm}}\sqrt{1+\delta_{pq}}}\tilde{r}_{p}\tilde{r}_{q}\frac{1}{\sqrt{1+\delta_{yz}}}r_{y}^{\dagger}r_{z}^{\dagger}\left|0\right\rangle 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\left\langle 0\right|\frac{1}{\sqrt{1+\delta_{wx}}}r_{w}r_{x}\sum_{n\geq m,p\geq q}^{N_{cav}}\frac{\tilde{U}_{nmpq}}{\sqrt{1+\delta_{nm}}\sqrt{1+\delta_{pq}}}\tilde{r}_{n}^{\dagger}\tilde{r}_{m}^{\dagger}\left(\delta_{pz}\delta_{qy}+\delta_{py}\delta_{qz}\right)\frac{1}{\sqrt{1+\delta_{yz}}}\left|0\right\rangle 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\left\langle 0\right|\frac{1}{\sqrt{1+\delta_{wx}}}r_{w}r_{x}\sum_{n\geq m}^{N_{cav}}\frac{\tilde{U}_{nmyz}}{\sqrt{1+\delta_{nm}}}\tilde{r}_{n}^{\dagger}\tilde{r}_{m}^{\dagger}\left(\delta_{yz}+1\right)\frac{1}{\sqrt{1+\delta_{yz}}\sqrt{1+\delta_{yz}}}\left|0\right\rangle 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\left\langle 0\right|\frac{1}{\sqrt{1+\delta_{wx}}}r_{w}r_{x}\sum_{n\geq m}^{N_{cav}}\frac{\tilde{U}_{nmyz}}{\sqrt{1+\delta_{nm}}}\tilde{r}_{n}^{\dagger}\tilde{r}_{m}^{\dagger}\left|0\right\rangle 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+extra coefficients now cancel properly! Regardless of the combination of
+ Rydberg states, we get the proper number of interaction energies (one,
+ for these two-collective-Rydberg states).
+ What about for a three Rydberg state? It's guaranteed to work if the three
+ rydbergs are all different (since a single, different term in the sum would
+ cover each combination).
+ What about the state with three Rydbergs of the same type?
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\sum_{n\geq m,p\geq q}^{N_{cav}}\frac{\tilde{U}_{nmpq}}{\sqrt{1+\delta_{nm}}\sqrt{1+\delta_{pq}}}\tilde{r}_{p}\tilde{r}_{q}\left|R_{z}R_{z}R_{z}\right\rangle 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\sum_{n\geq m,p\geq q}^{N_{cav}}\frac{\tilde{U}_{nmpq}}{\sqrt{1+\delta_{nm}}\sqrt{1+\delta_{pq}}}\tilde{r}_{p}\tilde{r}_{q}\frac{1}{\sqrt{6}}\left(r_{z}^{\dagger}\right)^{3}\left|0\right\rangle 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\sum_{n\geq m,p\geq q}^{N_{cav}}\frac{\tilde{U}_{nmpq}}{\sqrt{1+\delta_{nm}}\sqrt{2}}\tilde{r}_{z}\tilde{r}_{z}\frac{1}{\sqrt{6}}\left(r_{z}^{\dagger}\right)^{3}\left|0\right\rangle 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\sum_{n\geq m,p\geq q}^{N_{cav}}\frac{\tilde{U}_{nmpq}}{\sqrt{1+\delta_{nm}}\sqrt{2}}\sqrt{6}\left(r_{z}^{\dagger}\right)\left|0\right\rangle 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\sum_{n\geq m,p\geq q}^{N_{cav}}\frac{\tilde{U}_{nmpq}}{\sqrt{1+\delta_{nm}}}\sqrt{3}\left(r_{z}^{\dagger}\right)\left|0\right\rangle 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+The other side (the 
+\begin_inset Quotes eld
+\end_inset
+
+bra
+\begin_inset Quotes erd
+\end_inset
+
+ side) should behave the same way, yielding overall 
+\begin_inset Formula 
+\[
+3\tilde{U}_{zzzz}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+which is the correct answer! Each collective rydberg interacts with the
+ others, yielding 3 interactions overall.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Comment
+status collapsed
+
+\begin_layout Plain Layout
+Similarly for Omega...
+ make sure we get the various extra factors right.
+ Note that we have taken indics with 
+\begin_inset Formula $m\geq n$
+\end_inset
+
+, and let's also assume 
+\begin_inset Formula $w\geq x$
+\end_inset
+
+ (since it doesnt matter):
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\left\langle R_{w}R_{x}\right|\sum_{nq}^{N_{cav}}\tilde{r}_{n}^{\dagger}\left(\Omega\delta_{nq}\right)p_{q}\left|E_{y}R_{z}\right\rangle 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\left\langle 0\right|r_{w}r_{x}\frac{1}{\sqrt{1+\delta_{wx}}}\sum_{nq}^{N_{cav}}\tilde{r}_{n}^{\dagger}\left(\Omega\delta_{nq}\right)p_{q}p_{y}^{\dagger}r_{z}^{\dagger}\left|0\right\rangle 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\left\langle 0\right|r_{w}r_{x}\frac{1}{\sqrt{1+\delta_{wx}}}\sum_{nq}^{N_{cav}}\tilde{r}_{n}^{\dagger}\left(\Omega\delta_{nq}\right)\delta_{qy}r_{z}^{\dagger}\left|0\right\rangle 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\left\langle 0\right|r_{w}r_{x}\frac{\Omega}{\sqrt{1+\delta_{wx}}}\tilde{r}_{y}^{\dagger}r_{z}^{\dagger}\left|0\right\rangle 
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left\langle 0\right|\frac{\Omega}{\sqrt{1+\delta_{wx}}}(\delta_{wy}\delta_{xz}+\delta_{wz}\delta_{xy})\left|0\right\rangle 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+So, 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\begin{cases}
+\sqrt{2}\Omega & w=x\\
+\Omega & w\neq x
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+which would seem to be correct.
+ Therefore, this simple term seems to be correct without any modification.
+ How about the fancier one?
+\end_layout
+
+\begin_layout Plain Layout
+...
+\end_layout
+
+\begin_layout Plain Layout
+...
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\left\langle R_{w}R_{x}\right|\sum_{nq}^{N_{cav}}\tilde{r}_{n}^{\dagger}\left(\sum_{m\geq n,p}\delta\tilde{\Omega}_{nmpq}\tilde{r}_{m}^{\dagger}\tilde{r}_{p}\right)p_{q}\left|E_{y}R_{z}\right\rangle 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\left\langle 0\right|r_{w}r_{x}\frac{1}{\sqrt{1+\delta_{wx}}}\sum_{nq}^{N_{cav}}\tilde{r}_{n}^{\dagger}\left(\sum_{m\geq n,p}\delta\tilde{\Omega}_{nmpq}\tilde{r}_{m}^{\dagger}\tilde{r}_{p}\right)p_{q}p_{y}^{\dagger}r_{z}^{\dagger}\left|0\right\rangle 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\left\langle 0\right|r_{w}r_{x}\frac{1}{\sqrt{1+\delta_{wx}}}\sum_{nq}^{N_{cav}}\tilde{r}_{n}^{\dagger}\left(\sum_{m\geq n,p}\delta\tilde{\Omega}_{nmpq}\tilde{r}_{m}^{\dagger}\right)\delta_{yq}\delta_{zp}\left|0\right\rangle 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\left\langle 0\right|\frac{1}{\sqrt{1+\delta_{wx}}}\sum_{n}^{N_{cav}}r_{w}r_{x}\tilde{r}_{n}^{\dagger}\tilde{r}_{m}^{\dagger}\left(\sum_{m\geq n}\delta\tilde{\Omega}_{nmzy}\right)\left|0\right\rangle 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\left\langle 0\right|\frac{1}{\sqrt{1+\delta_{wx}}}\sum_{n}^{N_{cav}}\left(\delta_{wn}\delta_{xm}+\delta_{wm}\delta_{xn}\right)\left(\sum_{m\geq n}\delta\tilde{\Omega}_{nmzy}\right)\left|0\right\rangle 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\begin{cases}
+\sqrt{2}\delta\tilde{\Omega}_{wxzy} & w=x\\
+\delta\tilde{\Omega}_{wxzy} & w>x
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+or equivalently
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\sqrt{1+\delta_{wx}}\delta\tilde{\Omega}_{wxzy}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $\tilde{U}_{nmpq}$
+\end_inset
+
+ is the renormalized interaction strength and 
+\begin_inset Formula $\delta\tilde{\Omega}_{nmpq}$
+\end_inset
+
+ accounts for the modification of the Blue Rabi frequency 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ for exciting each collective Rydberg state which results from the renormalizati
+on.
+ Ignoring couplings to additional collective P- and Rydberg-states, this
+ Hamiltonian would provide a complete description up to second order; however,
+ it is likely that higher order interaction terms and 
+\begin_inset Formula $\delta\Omega$
+\end_inset
+
+ terms would be required in the solution for three excitations.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+**It seems likely that 
+\begin_inset Formula $\delta\tilde{\Omega}_{nmpq}$
+\end_inset
+
+ will be extremely small if 
+\begin_inset Formula $m\neq p$
+\end_inset
+
+ and 
+\begin_inset Formula $n\neq p$
+\end_inset
+
+**
+\end_layout
+
+\begin_layout Subsection
+Renormalized Collective Rydberg-Rydberg States
+\end_layout
+
+\begin_layout Standard
+Here, we solve for the renormalized effective interaction 
+\begin_inset Formula $\tilde{U}_{nmpq}$
+\end_inset
+
+ and the second-Rydberg Blue Rabi frequency 
+\begin_inset Formula $\hat{\Omega}_{nmpq}=\sqrt{1+\delta_{nm}}\left(\Omega+\delta\tilde{\Omega}_{nmpq}\right)$
+\end_inset
+
+ under the assumption that the interactions do not modify the states 
+\begin_inset Formula $p_{n}^{\dagger}\tilde{r}_{m}^{\dagger}\left|0\right\rangle $
+\end_inset
+
+ but only modify the states 
+\begin_inset Formula $\tilde{r}_{n}^{\dagger}\tilde{r}_{m}^{\dagger}\left|0\right\rangle $
+\end_inset
+
+.
+ The excited state + Rydberg state for cavity modes 
+\begin_inset Formula $n$
+\end_inset
+
+ and 
+\begin_inset Formula $m$
+\end_inset
+
+ can immediately be written:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left|E_{n}R_{m}\right\rangle =p_{n}^{\dagger}\tilde{r}_{m}^{\dagger}\left|0\right\rangle =\frac{1}{G_{n}G_{m}}\sum_{kj}^{N_{at}}g_{jn}g_{km}\sigma_{j}^{es}\sigma_{k}^{rs}\left|0\right\rangle .
+\]
+
+\end_inset
+
+The relevant NHPT equation (labeled 
+\begin_inset Quotes eld
+\end_inset
+
+Two rydbergs: 
+\begin_inset Formula $\sigma_{j}^{rg}\sigma_{k}^{rg}$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+ above) is
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+(2\delta_{2}+U(|x_{j}-x_{k}|))B_{rr}^{jk}+\Omega B_{er}^{jk}+\Omega B_{er}^{kj}=0,
+\]
+
+\end_inset
+
+and using the known collective state 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\left|E_{n}R_{m}\right\rangle $
+\end_inset
+
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+we have 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+B_{er}^{jk}=\frac{g_{jn}g_{km}}{G_{n}G_{m}}.
+\]
+
+\end_inset
+
+In principle, one might worry that we should consider 
+\begin_inset Formula $\left|E_{m}R_{n}\right\rangle $
+\end_inset
+
+ simultaneously, and that we might overconstrain the system by assuming
+ that both states are unchanged by the interactions.
+ However, due to the symmetry of the NHPT equation of motion, we would obtain
+ the same 
+\begin_inset Formula $\left|R_{m}R_{n}\right\rangle $
+\end_inset
+
+ regardless of the starting point.
+ Substituting into the equation of motion we find,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+B_{rr}^{jk}=-\frac{\Omega}{G_{n}G_{m}}\frac{g_{jn}g_{km}+g_{kn}g_{jm}}{2\delta_{2}+U(|x_{j}-x_{k}|)}
+\]
+
+\end_inset
+
+Note that this is only an approximation of the collective two Rydberg state,
+ since this choice of 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\left|E_{n}R_{m}\right\rangle $
+\end_inset
+
+ and 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+
+\begin_inset Formula $\left|R_{m}R_{n}\right\rangle $
+\end_inset
+
+ does not satisfy the other NHPT equations.
+\end_layout
+
+\begin_layout Standard
+From these coefficients we can build a normalized two-Rydberg state for
+ each pair of cavity modes,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left|R_{n}R_{m}\right\rangle =\frac{1}{\sqrt{2}}\frac{\sum_{kj}^{N_{at}}\frac{g_{jn}g_{km}+g_{kn}g_{jm}}{2\delta_{2}+U(|x_{j}-x_{k}|)}\sigma_{j}^{rs}\sigma_{k}^{rs}\left|0\right\rangle }{\sqrt{\sum_{kj}^{N_{at}}\left|\frac{g_{jn}g_{km}+g_{kn}g_{jm}}{2\delta_{2}+U(|x_{j}-x_{k}|)}\right|^{2}}}
+\]
+
+\end_inset
+
+From here, we can easily calculate the renormalized interaction strengths:
+ (**note: in 
+\begin_inset Formula $\tilde{U}$
+\end_inset
+
+ I have added some extra normalization factors, in order to simplify the
+ form of the effective Hamiltonian above**)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\hat{U}_{nmpq}=\left\langle R_{n}R_{m}\right|\frac{1}{2}\sum_{s\neq t}\sigma_{s}^{rr}\sigma_{t}^{rr}U(|x_{s}-x_{t}|)\left|R_{p}R_{q}\right\rangle 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Comment
+status collapsed
+
+\begin_layout Plain Layout
+VERSION 2, allowing for four different collective rydbergs...
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+U_{nmpq}=\left\langle R_{n}R_{m}\right|\frac{1}{2}\sum_{s\neq t}\sigma_{s}^{rr}\sigma_{t}^{rr}U(|x_{s}-x_{t}|)\left|R_{p}R_{q}\right\rangle 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+U_{nmpq}=\left\langle 0\right|\frac{\sum_{zx}^{N_{at}}\left(\frac{g_{zn}g_{xm}+g_{xn}g_{zm}}{2\delta_{2}+U(|x_{z}-x_{x}|)}\right)^{*}\sigma_{z}^{sr}\sigma_{x}^{sr}}{\sqrt{\sum_{kj}^{N_{at}}\left|\frac{g_{jn}g_{km}+g_{kn}g_{jm}}{2\delta_{2}+U(|x_{j}-x_{k}|)}\right|^{2}}}\frac{1}{4}\sum_{s\neq t}\sigma_{s}^{rr}\sigma_{t}^{rr}U(|x_{s}-x_{t}|)\frac{\sum_{kj}^{N_{at}}\frac{g_{jp}g_{kq}+g_{kp}g_{jq}}{2\delta_{2}+U(|x_{j}-x_{k}|)}\sigma_{j}^{rs}\sigma_{k}^{rs}}{\sqrt{\sum_{kj}^{N_{at}}\left|\frac{g_{jp}g_{kq}+g_{kp}g_{jq}}{2\delta_{2}+U(|x_{j}-x_{k}|)}\right|^{2}}}\left|0\right\rangle 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+U_{nmpq}=\frac{1}{4}\left\langle 0\right|\frac{\sum_{zx}^{N_{at}}\left(\frac{g_{zn}g_{xm}+g_{xn}g_{zm}}{2\delta_{2}+U(|x_{z}-x_{x}|)}\right)^{*}}{\sqrt{\sum_{kj}^{N_{at}}\left|\frac{g_{jn}g_{km}+g_{kn}g_{jm}}{2\delta_{2}+U(|x_{j}-x_{k}|)}\right|^{2}}}\sum_{s\neq t}\sum_{kj}^{N_{at}}\sigma_{z}^{sr}\sigma_{x}^{sr}\sigma_{s}^{rr}\sigma_{t}^{rr}U(|x_{s}-x_{t}|)\sigma_{j}^{rs}\sigma_{k}^{rs}\frac{\frac{g_{jp}g_{kq}+g_{kp}g_{jq}}{2\delta_{2}+U(|x_{j}-x_{k}|)}}{\sqrt{\sum_{kj}^{N_{at}}\left|\frac{g_{jp}g_{kq}+g_{kp}g_{jq}}{2\delta_{2}+U(|x_{j}-x_{k}|)}\right|^{2}}}\left|0\right\rangle 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+U_{nmpq}=\frac{1}{4}\left\langle 0\right|\frac{\sum_{zx}^{N_{at}}\left(\frac{g_{zn}g_{xm}+g_{xn}g_{zm}}{2\delta_{2}+U(|x_{z}-x_{x}|)}\right)^{*}}{\sqrt{\sum_{kj}^{N_{at}}\left|\frac{g_{jn}g_{km}+g_{kn}g_{jm}}{2\delta_{2}+U(|x_{j}-x_{k}|)}\right|^{2}}}\sum_{s\neq t}\sum_{kj}^{N_{at}}\sigma_{z}^{sr}\sigma_{x}^{sr}\sigma_{s}^{rr}\sigma_{t}^{rr}U(|x_{s}-x_{t}|)\left(\delta_{js}\delta_{kt}+\delta_{jt}\delta_{ks}\right)\frac{\frac{g_{jp}g_{kq}+g_{kp}g_{jq}}{2\delta_{2}+U(|x_{j}-x_{k}|)}}{\sqrt{\sum_{kj}^{N_{at}}\left|\frac{g_{jp}g_{kq}+g_{kp}g_{jq}}{2\delta_{2}+U(|x_{j}-x_{k}|)}\right|^{2}}}\left|0\right\rangle 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+U_{nmpq}=\frac{\sum_{kj}^{N_{at}}\left(\frac{g_{kn}g_{jm}+g_{jn}g_{km}}{2\delta_{2}+U(|x_{j}-x_{k}|)}\right)^{*}}{\sqrt{\sum_{kj}^{N_{at}}\left|\frac{g_{jn}g_{km}+g_{kn}g_{jm}}{2\delta_{2}+U(|x_{j}-x_{k}|)}\right|^{2}}}U(|x_{j}-x_{k}|)\frac{\frac{g_{jp}g_{kq}+g_{kp}g_{jq}}{2\delta_{2}+U(|x_{j}-x_{k}|)}}{\sqrt{\sum_{kj}^{N_{at}}\left|\frac{g_{jp}g_{kq}+g_{kp}g_{jq}}{2\delta_{2}+U(|x_{j}-x_{k}|)}\right|^{2}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+U_{nmpq}=\frac{\sum_{kj}^{N_{at}}\left(\frac{g_{kn}g_{jm}+g_{jn}g_{km}}{2\delta_{2}+U(|x_{j}-x_{k}|)}\right)^{*}\left(\frac{g_{jp}g_{kq}+g_{kp}g_{jq}}{2\delta_{2}+U(|x_{j}-x_{k}|)}\right)}{\sqrt{\sum_{kj}^{N_{at}}\left|\frac{g_{jn}g_{km}+g_{kn}g_{jm}}{2\delta_{2}+U(|x_{j}-x_{k}|)}\right|^{2}}\sqrt{\sum_{kj}^{N_{at}}\left|\frac{g_{jp}g_{kq}+g_{kp}g_{jq}}{2\delta_{2}+U(|x_{j}-x_{k}|)}\right|^{2}}}U(|x_{j}-x_{k}|)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{multline*}
+\hat{U}_{nmpq}=\\
+\frac{\sum_{kj}^{N_{at}}\left(\frac{g_{kn}g_{jm}+g_{jn}g_{km}}{2\delta_{2}+U(|x_{j}-x_{k}|)}\right)^{*}\left(\frac{g_{jp}g_{kq}+g_{kp}g_{jq}}{2\delta_{2}+U(|x_{j}-x_{k}|)}\right)U\left(|x_{j}-x_{k}|\right)}{\sqrt{\sum_{kj}^{N_{at}}\left|\frac{g_{jn}g_{km}+g_{kn}g_{jm}}{2\delta_{2}+U(|x_{j}-x_{k}|)}\right|^{2}}\sqrt{\sum_{kj}^{N_{at}}\left|\frac{g_{jp}g_{kq}+g_{kp}g_{jq}}{2\delta_{2}+U(|x_{j}-x_{k}|)}\right|^{2}}}
+\end{multline*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\tilde{U}_{nmpq}\equiv\frac{1}{\sqrt{1+\delta_{nm}}\sqrt{1+\delta_{pq}}}\hat{U}_{nmpq}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+As before, it's essentially an average weighted by the contribution of each
+ atom to the double Rydberg state (strongly interacting pairs are suppressed).
+ We must also calculate the modified 
+\begin_inset Formula $\tilde{\Omega}$
+\end_inset
+
+: (as with 
+\begin_inset Formula $\tilde{U}$
+\end_inset
+
+, including the factor 
+\begin_inset Formula $\sqrt{1+\delta_{nm}}$
+\end_inset
+
+ simplifies the form of the effective Hamiltonian) 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\hat{\Omega}_{nmpq}=\left\langle R_{n}R_{m}\right|\sum_{m}^{N_{at}}\left(\Omega\sigma_{m}^{re}+\Omega^{*}\sigma_{m}^{er}\right)\left|R_{p}E_{q}\right\rangle 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Comment
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Version two; allow for mode changes.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\tilde{\Omega}_{nmpq}=\left\langle R_{n}R_{m}\right|\sum_{h}^{N_{at}}\left(\Omega\sigma_{h}^{re}+\Omega^{*}\sigma_{h}^{er}\right)\left|E_{p}R_{q}\right\rangle 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\tilde{\Omega}_{nmpq}=\frac{1}{\sqrt{2}}\left\langle 0\right|\frac{\sum_{st}^{N_{at}}\left(\frac{g_{sn}g_{tm}+g_{tn}g_{sm}}{2\delta_{2}+U(|x_{s}-x_{t}|)}\right)^{*}\sigma_{s}^{sr}\sigma_{t}^{sr}}{\sqrt{\sum_{kj}^{N_{at}}\left|\frac{g_{jn}g_{km}+g_{kn}g_{jm}}{2\delta_{2}+U(|x_{j}-x_{k}|)}\right|^{2}}}\sum_{h}^{N_{at}}\left(\Omega\sigma_{h}^{re}\right)\sum_{kj}^{N_{at}}\frac{g_{jp}g_{kq}}{G_{p}G_{q}}\sigma_{j}^{es}\sigma_{k}^{rs}\left|0\right\rangle 
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\tilde{\Omega}_{nmpq}=\frac{\Omega}{\sqrt{2}}\left\langle 0\right|\frac{\sum_{st}^{N_{at}}\left(\frac{g_{sn}g_{tm}+g_{tn}g_{sm}}{2\delta_{2}+U(|x_{s}-x_{t}|)}\right)^{*}\sigma_{s}^{sr}\sigma_{t}^{sr}}{\sqrt{\sum_{kj}^{N_{at}}\left|\frac{g_{jn}g_{km}+g_{kn}g_{jm}}{2\delta_{2}+U(|x_{j}-x_{k}|)}\right|^{2}}}\sum_{kj}^{N_{at}}\frac{g_{jp}g_{kq}}{G_{p}G_{q}}\sigma_{j}^{rs}\sigma_{k}^{rs}\left|0\right\rangle 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\tilde{\Omega}_{nmpq}=\frac{\Omega}{\sqrt{2}}\left\langle 0\right|\frac{\sum_{st}^{N_{at}}\sum_{kj}^{N_{at}}\left(\frac{g_{sn}g_{tm}+g_{tn}g_{sm}}{2\delta_{2}+U(|x_{s}-x_{t}|)}\right)^{*}\sigma_{s}^{sr}\sigma_{t}^{sr}\sigma_{j}^{rs}\sigma_{k}^{rs}}{\sqrt{\sum_{kj}^{N_{at}}\left|\frac{g_{jn}g_{km}+g_{kn}g_{jm}}{2\delta_{2}+U(|x_{j}-x_{k}|)}\right|^{2}}}\frac{g_{jp}g_{kq}}{G_{p}G_{q}}\left|0\right\rangle 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\tilde{\Omega}_{nmpq}=\frac{\Omega}{\sqrt{2}}\left\langle 0\right|\frac{\sum_{st}^{N_{at}}\sum_{kj}^{N_{at}}\left(\frac{g_{sn}g_{tm}+g_{tn}g_{sm}}{2\delta_{2}+U(|x_{s}-x_{t}|)}\right)^{*}\left(\delta_{sj}\delta_{tk}+\delta_{sk}\delta_{tj}\right)}{\sqrt{\sum_{kj}^{N_{at}}\left|\frac{g_{jn}g_{km}+g_{kn}g_{jm}}{2\delta_{2}+U(|x_{j}-x_{k}|)}\right|^{2}}}\frac{g_{jp}g_{kq}}{G_{p}G_{q}}\left|0\right\rangle 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\tilde{\Omega}_{nmpq}=\frac{\Omega}{\sqrt{2}}\frac{\sum_{st}^{N_{at}}\left(\frac{g_{sn}g_{tm}+g_{tn}g_{sm}}{2\delta_{2}+U(|x_{s}-x_{t}|)}\right)^{*}\left(\delta_{sj}\delta_{tk}g_{jp}g_{kq}+\delta_{sk}\delta_{tj}g_{jp}g_{kq}\right)}{G_{p}G_{q}\sqrt{\sum_{kj}^{N_{at}}\left|\frac{g_{jn}g_{km}+g_{kn}g_{jm}}{2\delta_{2}+U(|x_{j}-x_{k}|)}\right|^{2}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\tilde{\Omega}_{nmpq}=\frac{\Omega}{\sqrt{2}}\frac{\sum_{st}^{N_{at}}\left(\frac{g_{sn}g_{tm}+g_{tn}g_{sm}}{2\delta_{2}+U(|x_{s}-x_{t}|)}\right)^{*}\left(g_{sp}g_{tq}+g_{tp}g_{sq}\right)}{G_{p}G_{q}\sqrt{\sum_{kj}^{N_{at}}\left|\frac{g_{jn}g_{km}+g_{kn}g_{jm}}{2\delta_{2}+U(|x_{j}-x_{k}|)}\right|^{2}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+This appears to behave correctly (same as before) in the case that the cavity
+ mode indices are all the same.
+ But what about:
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\tilde{\Omega}_{nmnm}=\frac{\Omega}{\sqrt{2}}\frac{\sum_{st}^{N_{at}}\left(\frac{g_{sn}g_{tm}+g_{tn}g_{sm}}{2\delta_{2}+U(|x_{s}-x_{t}|)}\right)^{*}\left(g_{sn}g_{tm}+g_{tn}g_{sm}\right)}{G_{n}G_{m}\sqrt{\sum_{kj}^{N_{at}}\left|\frac{g_{jn}g_{km}+g_{kn}g_{jm}}{2\delta_{2}+U(|x_{j}-x_{k}|)}\right|^{2}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+G_{m}^{2}\equiv\sum_{j}^{N_{at}}\left|g_{jm}\right|^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\tilde{\Omega}_{nmnm}=\frac{\Omega}{\sqrt{2}}\frac{\sum_{st}^{N_{at}}\left(\frac{g_{sn}g_{tm}+g_{tn}g_{sm}}{2\delta_{2}+U(|x_{s}-x_{t}|)}\right)^{*}\left(g_{sn}g_{tm}+g_{tn}g_{sm}\right)}{G_{n}G_{m}\sqrt{\sum_{kj}^{N_{at}}\left|\frac{g_{jn}g_{km}+g_{kn}g_{jm}}{2\delta_{2}+U(|x_{j}-x_{k}|)}\right|^{2}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+for simplicity in checking normalization, neglect interactions temporarily
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\tilde{\Omega}_{nmnm}=\frac{\Omega}{\sqrt{2}}\frac{\sum_{st}^{N_{at}}\left(g_{sn}g_{tm}+g_{tn}g_{sm}\right)^{*}\left(g_{sn}g_{tm}+g_{tn}g_{sm}\right)}{G_{n}G_{m}\sqrt{\sum_{kj}^{N_{at}}\left|g_{jn}g_{km}+g_{kn}g_{jm}\right|^{2}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\tilde{\Omega}_{nmnm}=\frac{\Omega}{\sqrt{2}}\frac{\sum_{kj}^{N_{at}}\left|g_{jn}g_{km}+g_{kn}g_{jm}\right|^{2}}{G_{n}G_{m}\sqrt{\sum_{kj}^{N_{at}}\left|g_{jn}g_{km}+g_{kn}g_{jm}\right|^{2}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\tilde{\Omega}_{nmnm}=\frac{\Omega}{\sqrt{2}}\frac{\sqrt{\sum_{kj}^{N_{at}}\left|g_{jn}g_{km}+g_{kn}g_{jm}\right|^{2}}}{G_{n}G_{m}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\tilde{\Omega}_{nmnm}=\frac{\Omega}{\sqrt{2}}\frac{\sqrt{\sum_{kj}^{N_{at}}\left|g_{jn}g_{km}+g_{kn}g_{jm}\right|^{2}}}{\sqrt{\sum_{j}^{N_{at}}\left|g_{jn}\right|^{2}}\sqrt{\sum_{j}^{N_{at}}\left|g_{jm}\right|^{2}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\tilde{\Omega}_{nmnm}=\frac{\Omega}{\sqrt{2}}\frac{\sqrt{\sum_{kj}^{N_{at}}g_{jn}^{*}g_{km}^{*}g_{jn}g_{km}+\sum_{kj}^{N_{at}}g_{jn}^{*}g_{km}^{*}g_{kn}g_{jm}+\sum_{kj}^{N_{at}}g_{kn}^{*}g_{jm}^{*}g_{jn}g_{km}+\sum_{kj}^{N_{at}}g_{kn}^{*}g_{jm}^{*}g_{kn}g_{jm}}}{\sqrt{\sum_{j}^{N_{at}}\left|g_{jn}\right|^{2}}\sqrt{\sum_{j}^{N_{at}}\left|g_{jm}\right|^{2}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\tilde{\Omega}_{nmnm}=\frac{\Omega}{\sqrt{2}}\frac{\sqrt{2\sum_{j}^{N_{at}}\left|g_{jm}\right|^{2}\sum_{j}^{N_{at}}\left|g_{jn}\right|^{2}+\sum_{kj}^{N_{at}}g_{jn}^{*}g_{km}^{*}g_{kn}g_{jm}+\sum_{kj}^{N_{at}}g_{kn}^{*}g_{jm}^{*}g_{jn}g_{km}}}{\sqrt{\sum_{j}^{N_{at}}\left|g_{jn}\right|^{2}}\sqrt{\sum_{j}^{N_{at}}\left|g_{jm}\right|^{2}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\tilde{\Omega}_{nmnm}=\frac{\Omega}{\sqrt{2}}\frac{\sqrt{2\sum_{j}^{N_{at}}\left|g_{jm}\right|^{2}\sum_{j}^{N_{at}}\left|g_{jn}\right|^{2}+\sum_{j}^{N_{at}}g_{jn}^{*}g_{jm}\sum_{k}^{N_{at}}g_{km}^{*}g_{kn}+\sum_{j}^{N_{at}}g_{jn}g_{jm}^{*}\sum_{k}^{N_{at}}g_{km}g_{kn}^{*}}}{\sqrt{\sum_{j}^{N_{at}}\left|g_{jn}\right|^{2}}\sqrt{\sum_{j}^{N_{at}}\left|g_{jm}\right|^{2}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+We have 
+\begin_inset Formula $\sum_{j}^{N_{at}}g_{jn}^{*}g_{jm}\sum_{k}^{N_{at}}g_{km}^{*}g_{kn}=0$
+\end_inset
+
+ for 
+\begin_inset Formula $n\neq m,$
+\end_inset
+
+ or 
+\begin_inset Formula $\sum_{j}^{N_{at}}g_{jn}^{*}g_{jm}\sum_{k}^{N_{at}}g_{km}^{*}g_{kn}=\sum_{j}^{N_{at}}\left|g_{jm}\right|^{2}\sum_{j}^{N_{at}}\left|g_{jn}\right|^{2}$
+\end_inset
+
+ for 
+\begin_inset Formula $n=m$
+\end_inset
+
+, so: 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\tilde{\Omega}_{nmnm}=\begin{cases}
+\sqrt{2}\Omega & n=m\\
+\Omega & n\neq m
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\hat{\Omega}_{nmpq}=\frac{\Omega}{\sqrt{2}}\frac{\sum_{kj}^{N_{at}}\left(\frac{g_{kn}g_{jm}+g_{jn}g_{km}}{2\delta_{2}+U(|x_{k}-x_{j}|)}\right)^{*}\left(g_{kp}g_{jq}+g_{jp}g_{kq}\right)}{G_{p}G_{q}\sqrt{\sum_{kj}^{N_{at}}\left|\frac{g_{jn}g_{km}+g_{kn}g_{jm}}{2\delta_{2}+U(|x_{j}-x_{k}|)}\right|^{2}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\Omega+\delta\tilde{\Omega}_{nmpq}\equiv\frac{\hat{\Omega}_{nmpq}}{\sqrt{1+\delta_{nm}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Note that the effective Omega is simply the ordinary Omega modified by the
+ overlap between the renormalized and the non-renormalized collective state.
+ 
+\end_layout
+
+\begin_layout Standard
+...
+\end_layout
+
+\begin_layout Standard
+...
+\end_layout
+
+\begin_layout Standard
+...
+\end_layout
+
+\begin_layout Standard
+...
+\end_layout
+
+\begin_layout Subsection
+Can we include additional parameters for the other lossy channels? 
+\end_layout
+
+\begin_layout Standard
+ex.
+ for couplings to other P / R superpositions? Can you handle these ex.
+ using a Fermi's golden rule type deal? I'm sure we CAN...
+ but I don't know exactly how off the top of my head
+\end_layout
+
+\begin_layout Subsection
+Justifying this approximation
+\end_layout
+
+\begin_layout Standard
+** NOT SURE IT'S POSSIBLE, but let's try =D **
+\end_layout
+
+\begin_layout Standard
+Linear solution for ER:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+B_{er}^{jk}=\frac{g_{jn}g_{km}}{G_{n}G_{m}}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Linear solution for RR: (just drop the interactions)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+B_{rr}^{jk}=-\frac{\Omega}{G_{n}G_{m}}\frac{g_{jn}g_{km}+g_{kn}g_{jm}}{2\delta_{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Assuming linear solution for ER and using NHPT equation for RR:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+B_{rr}^{jk}=-\frac{\Omega}{G_{n}G_{m}}\frac{g_{jn}g_{km}+g_{kn}g_{jm}}{2\delta_{2}+U(|x_{j}-x_{k}|)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\Delta B_{rr}^{jk}=\frac{\Omega\left(g_{jn}g_{km}+g_{kn}g_{jm}\right)}{G_{n}G_{m}}\left(\frac{1}{2\delta_{2}}-\frac{1}{2\delta_{2}+U(|x_{j}-x_{k}|)}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+NHPT Equation for ER:
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\begin_inset Formula 
+\[
+(\delta_{e}+\delta_{2})B_{er}^{jk}+\sum_{n}^{N_{cav}}g_{jn}B_{cr}^{nk}+\Omega_{k}^{b}B_{ee}^{jk}+\left(\Omega_{j}^{b}\right)^{*}B_{rr}^{jk}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

@@ -1,0 +1,220 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass revtex4-1
+\begin_preamble
+\usepackage{bbold}
+% Added by lyx2lyx
+\renewcommand{\textendash}{--}
+\renewcommand{\textemdash}{---}
+\end_preamble
+\options notitlepage
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine natbib
+\cite_engine_type authoryear
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+The typical 
+\begin_inset Formula $g^{(2)}$
+\end_inset
+
+ correlation function has the form
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+g^{(2)}(t)=\frac{\left\langle \psi_{ss}\right|a^{\dagger}(0)a^{\dagger}(t)a(t)a(0)\left|\psi_{ss}\right\rangle }{\left\langle \psi_{ss}\right|a^{\dagger}(0)a(0)\left|\psi_{ss}\right\rangle \left\langle \psi_{ss}\right|a^{\dagger}(t)a(t)\left|\psi_{ss}\right\rangle }
+\]
+
+\end_inset
+
+such that it represents the likelihood of seeing two photons separated by
+ time 
+\begin_inset Formula $t$
+\end_inset
+
+ relative to a coherent state (for which the first annihilation operator
+ would have no impact on the form of the field seen by the second annihilation
+ operator) which has 
+\begin_inset Formula $g_{coh}^{(2)}(t)=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+When our state is not pure but instead represented by a density matrix,
+ the equivalent correlation function has the form
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+g^{(2)}(t)=\frac{Tr[a^{\dagger}(0)a^{\dagger}(t)a(t)a(0)\rho_{ss}]}{Tr[a^{\dagger}(0)a(0)\rho_{ss}]Tr[a^{\dagger}(t)a(t)\rho_{ss}]}.
+\]
+
+\end_inset
+
+In case you're not familiar with this, note that the density matrix for
+ a pure state would be 
+\begin_inset Formula $\rho_{ss}=\left|\psi_{ss}\right\rangle \left\langle \psi_{ss}\right|$
+\end_inset
+
+, and that the trace is invariant under cyclic permutations of the operators
+ inside (https://en.wikipedia.org/wiki/Density_matrix).
+ 
+\end_layout
+
+\begin_layout Standard
+We can also write this
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+g^{(2)}(t)=\frac{Tr[a(t)a(0)\rho_{ss}a^{\dagger}(0)a^{\dagger}(t)]}{Tr[a(0)\rho_{ss}a^{\dagger}(0)]Tr[a(t)\rho_{ss}a^{\dagger}(t)]}.
+\]
+
+\end_inset
+
+Then note that annihilating a photon from the pure state 
+\begin_inset Formula $\left|\psi_{ss}\right\rangle $
+\end_inset
+
+ to yield the 
+\begin_inset Quotes eld
+\end_inset
+
+photon subtracted state
+\begin_inset Formula $\left|\psi_{m1}\right\rangle =a\left|\psi_{ss}\right\rangle $
+\end_inset
+
+ is, in density matrix form, 
+\begin_inset Formula 
+\[
+\rho_{m1}=\left|\psi_{m1}\right\rangle \left\langle \psi_{m1}\right|=a\left|\psi_{ss}\right\rangle \left\langle \psi_{ss}\right|a^{\dagger}=a\rho_{ss}a^{\dagger}.
+\]
+
+\end_inset
+
+Moreover, note that the time-evolved operator can be written as 
+\begin_inset Formula 
+\[
+a(t)=U^{\text{\dagger}}(t)a(0)U(t)
+\]
+
+\end_inset
+
+where the time evolution operator is 
+\begin_inset Formula 
+\[
+U(t)=e^{iHt/\hbar}
+\]
+
+\end_inset
+
+for a time-independent Hamiltonian, and more generally is whatever time-evolutio
+n operator corresponds to Schrodinger evolution under that Hamiltonian.
+ Anyway, the point is, we can now write this whole thing as:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+g^{(2)}(t)=\frac{Tr[a(0)U(t)\rho_{m1}U^{\dagger}(t)a^{\dagger}(0)]}{Tr[\rho_{m1}]^{2}}
+\]
+
+\end_inset
+
+ where in the denominator we have used the fact that the steady state is
+ time-independent.
+ The factor 
+\begin_inset Formula $U(t)\rho_{m1}U^{\dagger}(t)$
+\end_inset
+
+ is the time-evolved photon-subtracted density matrix, which we calculate
+ as rho_m1_t using mesolve in the python code.
+ Notice that in the call to mesolve we also pass 
+\begin_inset Formula $a^{\dagger}a$
+\end_inset
+
+; that's why rho_m1_t.expect[0] gives the expectation value of 
+\begin_inset Formula $a^{\dagger}(0)a(0)$
+\end_inset
+
+ in the state 
+\begin_inset Formula $\rho_{m1}(t)=U(t)\rho_{m1}U^{\dagger}(t)$
+\end_inset
+
+, and thus why the numerator calculated in the python code is appropriate.
+ 
+\end_layout
+
+\end_body
+\end_document
