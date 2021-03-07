@@ -1,5 +1,5 @@
 # Topological-Photonics
-Work I am doing while at Simon Labs@UChicago with Professor Jon Simon and Logan Clark (PhD).
+This is a project while at Simon Labs@UChicago with Professor Jon Simon and Logan Clark (PhD).
 
 Contents:
 A simplified model to characterize essential physics of our quantum optics experiment 
